@@ -1,3 +1,7 @@
 @Component - Esta anotação faz com que o bean registrado no Spring possa ser utilizado em qualquer bean, seja ele um serviço, um DAO, um controller, etc.
 
 @Autowired - É a anotação mais utilizada com relação a injeção de dependências. Como o próprio nome diz, o Autowired, indica um ponto aonde a injeção automática deve ser aplicada. Esta pode ser usada em métodos, atributos e construtores.
+
+@Controller - Esta anotação indica que aquela classe será um controller - Controller: o controlador existe entre o visual e o modelo. Ele recebe os eventos disparados pela visualização (ou outra fonte externa) e executa a reação apropriada a esses eventos. Na maioria dos casos, a reação é chamar um método no modelo. Como o visual e o modelo são conectados por meio de um mecanismo de notificação, o resultado dessa ação é automaticamente refletido na visualização.
+
+@RequestMapping - A anotação @RequestMapping indica que o controlador receberá as requisições feitas a partir da URL dada.
