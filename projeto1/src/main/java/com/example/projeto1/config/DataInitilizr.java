@@ -6,7 +6,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import com.example.projeto1.entities.User;
-import com.example.projeto1.repository.UserRepository;
+import com.example.projeto1.repositories.UserRepository;
 
 @Component
 public class DataInitilizr implements ApplicationListener<ContextRefreshedEvent>  {

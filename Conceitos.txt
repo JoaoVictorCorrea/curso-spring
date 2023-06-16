@@ -5,3 +5,5 @@
 @Controller - Esta anotação indica que aquela classe será um controller - Controller: o controlador existe entre o visual e o modelo. Ele recebe os eventos disparados pela visualização (ou outra fonte externa) e executa a reação apropriada a esses eventos. Na maioria dos casos, a reação é chamar um método no modelo. Como o visual e o modelo são conectados por meio de um mecanismo de notificação, o resultado dessa ação é automaticamente refletido na visualização.
 
 @RequestMapping - A anotação @RequestMapping indica que o controlador receberá as requisições feitas a partir da URL dada.
+
+@Service - Marcamos beans com @Service para indicar que ele está mantendo a lógica de negócios.
