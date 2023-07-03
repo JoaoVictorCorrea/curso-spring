@@ -3,6 +3,8 @@ package com.example.projeto1.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import com.example.projeto1.entities.Role;
@@ -55,6 +57,18 @@ public class DataInitilizr implements ApplicationListener<ContextRefreshedEvent>
 		Role role2 = createRole("Aluno", StatusRole.ATIVO);
 		
 		createUserWithRole("Paulo", "paulo@gmail.com", role2); */
+		
+		// --------------------------------------------------------
+		
+		/* paginação das roles
+		PageRequest pageable = PageRequest.of(2, 1);
+		
+		Page<Role> roles = this.roleRepository.findAll(pageable);
+		
+		for(Role role : roles) {
+			
+			System.out.println(role.getName());
+		} */
 	}
 	
 	public void createUser(String name, String email) {
