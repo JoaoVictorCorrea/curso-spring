@@ -1,6 +1,10 @@
 package com.example.projeto1.entities;
 
+import com.example.projeto1.enums.StatusRole;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +17,17 @@ public class Role {
 	private Long id;
 	
 	private String name;
+	
+	@Enumerated(EnumType.STRING)
+	private StatusRole status;
+	
+	public Role() {}
+	
+	public Role(String name, StatusRole status) {
+		
+		this.name = name;
+		this.status = status;
+	}
 
 	public Long getId() {
 		return id;
@@ -28,5 +43,13 @@ public class Role {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public StatusRole getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusRole status) {
+		this.status = status;
 	}
 }

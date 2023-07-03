@@ -1,8 +1,10 @@
 package com.example.projeto1.entities;
 
-import java.util.List;
-
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class User {
@@ -15,8 +17,8 @@ public class User {
 	
 	private String email;
 	
-	@ManyToMany
-	private List<Role> roles;
+	@ManyToOne
+	private Role role;
 
 	public User() {
 	}
@@ -24,6 +26,12 @@ public class User {
 	public User(String name, String email) {
 		this.name = name;
 		this.email = email;
+	}
+	
+	public User(String name, String email, Role role) {
+		this.name = name;
+		this.email = email;
+		this.role = role;
 	}
 
 	public Long getId() {
@@ -50,11 +58,11 @@ public class User {
 		this.email = email;
 	}
 	
-	public List<Role> getRoles() {
-		return roles;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }
