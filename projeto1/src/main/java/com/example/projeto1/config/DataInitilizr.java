@@ -72,11 +72,15 @@ public class DataInitilizr implements ApplicationListener<ContextRefreshedEvent>
 			System.out.println(role.getName());
 		} */
 		
+		// --------------------------------------------------------
+		
 		/* criação de uma nova role através do UserRepository, por causa do 'cascade = CascadeType.PERSIST'
 		   na classe User no atributo role
 		Role role = new Role("Professor", StatusRole.ATIVO);
 		
 		createUserWithRole("Fernando", "fernando@gmail.com", role); */
+		
+		// --------------------------------------------------------
 	}
 	
 	public void createUser(String name, String email) {

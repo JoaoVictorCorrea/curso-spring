@@ -15,3 +15,7 @@ Bean - Beans são instancias de classes que são gerenciadas por um Spring Ioc c
 @Configuration - Essa é uma anotação a nível de Classe que diz para o Container de Inversão de Controle do Spring que essa classe é a fonte de beans (dependencias requeridas por outras classes no projeto).
 
 @Profile - Esta anotação determina quais serão as configurações definidas para determinado ambiente de desenvolvimento, com ele você pode definir valores para variáveis que serão utilizados pela sua aplicação e que tipo de Configuração será feito em determinado ambiente, tudo isso em tempo de execução.
+
+--------------------------------------------------------------------------------------------------------------------
+
+REST (Representational State Transfer) refere-se a um grupo de restrições de design dentro da arquitetura de software que geram sistemas distribuídos eficientes, confiáveis e escaláveis. Um sistema é denominado RESTful quando adere a todas essas restrições. A ideia básica do REST é que um recurso, por exemplo um documento, seja transferido com seu estado bem definido, padronização de operações e formatos, ou serviços que se autodenominem RESTful, quando modificam diretamente o tipo de documento, ao invés de desencadear ações em algum lugar.
